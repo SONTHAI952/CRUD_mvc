@@ -3,11 +3,12 @@ namespace MVC;
 use MVC\Request;
 
 class Router{
+    //băm nhỏ địa chỉ URL đc request
     static public function parse($url, $request)
     {
         $url =trim($url);
         if($url == "/crud_mvc/"){
-            $request->controller ="tasks";
+            $request->controller ="notes";
             $request->action ="index";
             $request->params =[];
         }
