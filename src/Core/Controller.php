@@ -2,8 +2,8 @@
 namespace MVC\Core;
     class Controller
     {
-        var $vars = [];
-        var $layout = "default";
+        public $vars = [];
+        public $layout = "default";
 
         function set($d)
         {
