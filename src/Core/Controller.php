@@ -10,7 +10,7 @@ namespace MVC\Core;
             $this->vars = array_merge($this->vars, $d);
         }
 
-        function render($filename)
+        function render($filename)//Nhúng file view tương ứng
         {
             extract($this->vars);
             ob_start();
