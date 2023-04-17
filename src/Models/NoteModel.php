@@ -7,6 +7,7 @@ use MVC\Config\database;
  * @ORM\Entity
  * @ORM\Table(name="task")
  */
+//Ánh xạ với bảng trong database
 class NoteModel extends Model
 {
     /**

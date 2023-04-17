@@ -1,10 +1,31 @@
 <?php
 namespace MVC\Controllers;
-use MVC\Models\Note;
+use MVC\Models\NoteResourceModel;
 use MVC\Core\Controller;
 
 class notesController extends Controller
 {
-    
+    function index()
+    {
+        require(ROOT . 'Models/NoteModel.php');
+
+        $notes = new NoteResourceModel();
+
+        $d['notes'] = $notes->getAll();
+        $this->set($d);
+        $this->render("index");
+    }
+
+    function delete($id)
+    {
+        require(ROOT . 'Models/NoteModel.php');
+
+        $notes = new NoteResourceModel();
+        if ($notes->delete($id))
+        {
+            header("Location: " . WEBROOT . "notes/index");
+        }
+    }
+
 }
 ?>

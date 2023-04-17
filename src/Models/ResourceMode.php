@@ -47,7 +47,7 @@ class ResourceModel implements ResourceModelInterface{
         return $req->execute($arrayModel);
 
     }
-    public function delete(){
+    public function delete($id){
         // Xóa model khỏi cơ sở dữ liệu
         $sql = "DELETE FROM WHERE";
         $req = Database::getBdd()->prepare($sql);
